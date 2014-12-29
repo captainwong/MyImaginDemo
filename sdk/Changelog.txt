@@ -1,0 +1,21 @@
+2014-11-12 14:10 zhuangzhida@imagintech.com.cn
+(1)update win32 lib , V1.0.0_RTM version 950, implement DmsWS::GetP2PServer1(), add getP2Pserver and others about server
+
+2014-11-12 13:16 zhuangzhida@imagintech.com.cn
+(1)update android , V1.0.0_RTM version 950, implement DmsWS::GetP2PServer1(), add getP2Pserver and others about server
+
+2014-11-10 21:00 zhuangzhida@imagintech.com.cn
+(1) update ios,fixed bug for dns when change network
+
+2014-11-03 12:02 zhuangzhida@imagintech.com.cn
+(1)add android kd-core-api lib
+
+
+2014-11-03 11:45 zhuangzhida@imagintech.com.cn 
+(1)add win32 kd-core-api lib
+ 
+
+
+2014-11-03 laizuobin@imagintech.com.cn
+1°¢≥ı ºªØ
+

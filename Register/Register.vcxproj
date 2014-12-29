@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B8794CD2-79FF-4ED4-A7BE-ED52529EA04B}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>Register</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Text Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="Register.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-account-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-contactor.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-dev-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-dev-db.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-dev.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-discoverer.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-stack.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-user-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-user-db.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-user-manager.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\acc\core-api-acc-user.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-alarm-info.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-async-caller-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-async-caller-glib.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-async-caller.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-av-codec.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-contactor-glib.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-cred-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-cred.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-dev-info.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-dev-manager.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-dev-wifi-task.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-dev.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-digest-type-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-digest-type.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-global.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-language.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-logger-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-logger.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-network.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-obj.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-result-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-result.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-srv-info.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-transport-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-transport.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-wifi-ap.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\core\core-api-wifi-cred.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-alarm-event-args.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-alarm-event.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-camera.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-glib.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-media.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-network.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-ptz.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-stream.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device-wifi.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\device\core-api-device.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\dms\core-api-dms-account-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\dms\core-api-dms-contactor.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\dms\core-api-dms-discoverer.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\dms\core-api-dms-stack.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\event\core-api-event-enums-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\event\core-api-event-enums.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\event\core-api-event-kd-gpio-args.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\alarm\core-api-helper-event-count.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\alarm\core-api-helper-list-all-event-ids.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\alarm\core-api-helper-oper-all-event.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\alarm\core-api-helper-oper-event-by-id.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\alarm\core-api-helper-oper-event-by-ids.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\camera\core-api-helper-audio-codec.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\camera\core-api-helper-camera-enumerator.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\camera\core-api-helper-power-freq.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\camera\core-api-helper-ptz-enumerator.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\camera\core-api-helper-rt-sensor.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\camera\core-api-helper-sensor.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\camera\core-api-helper-stream-enumerator.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\camera\core-api-helper-stream.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\core-api-helper-device.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\core-api-helper-enumerator-caller-glib.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\core-api-helper-getter-caller-glib.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\core-api-helper-object-glib.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\core-api-helper-setter-caller-glib.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-network-enumerator.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-network-ipv4.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-network.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-wifi-add-alt-ap.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-wifi-alt-ap-enumerator.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-wifi-ap-enumerator.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-wifi-current-ap.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-wifi-del-alt-ap.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-wifi-scan.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\network\core-api-helper-wifi-wps.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\rtp\core-api-helper-rtp-crypto.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\sip\core-api-helper-subs-alarm-event.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\sys\core-api-helper-activate.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\sys\core-api-helper-datetime.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\sys\core-api-helper-devinfo.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\sys\core-api-helper-locale.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\helper\sys\core-api-helper-reboot.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\ice\core-api-ice-stun-uri-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\ice\core-api-ice-turn-account-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\ihms\core-api-ihms-tiny-server.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\kd-core-api-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\kd-core-api.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\qt-wrap\core-api-qt.hpp" />
+    <ClInclude Include="..\sdk\include\kd-core-api\sip\core-api-sip-account-advance.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\sip\core-api-sip-contactor.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\sip\core-api-sip-discoverer.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\sip\core-api-sip-stack.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\upnp\core-api-upnp-contactor.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\upnp\core-api-upnp-discoverer.h" />
+    <ClInclude Include="..\sdk\include\kd-core-api\upnp\core-api-upnp-stack.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

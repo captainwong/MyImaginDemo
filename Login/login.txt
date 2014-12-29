@@ -1,0 +1,32 @@
+now loging in
+login succeed
+Press any key to continue . . .
+create dms(include stack, contactor, discoverer)
+create device manager
+add dms to device manager
+get acc user db
+get stun server info
+stun info succeed:
+118.244.228.155 3478
+Press any key to continue . . .
+add stun info to device manager
+get turn server info
+turn info succeed:
+118.244.228.155 3479
+Press any key to continue . . .
+add turn info to device manager
+get sip server info
+sip info succeed:
+118.244.228.155 6060
+Press any key to continue . . .
+create sip stack and start
+su_source_port_create() returns 0198BA94
+Adding nameserver: 218.30.19.40
+Adding nameserver: 114.114.114.114
+nta_agent: received garbage from udp/192.168.0.222:28377/sip
+nta_agent: received garbage from udp/192.168.176.1:28377/sip
+nta_agent: received garbage from udp/192.168.44.1:28377/sip
+nta_agent: received garbage from udp/192.168.56.1:28377/sip
+nta_agent: received garbage from udp/127.0.0.1:28377/sip
+sip login failed, code 100, phrase Outbound NAT Detected
+Press any key to continue . . .
