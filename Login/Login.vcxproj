@@ -53,11 +53,15 @@
       <Optimization>Disabled</Optimization>
       <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
       <SDLCheck>true</SDLCheck>
+      <BrowseInformation>true</BrowseInformation>
     </ClCompile>
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
     </Link>
+    <Bscmake>
+      <PreserveSbr>true</PreserveSbr>
+    </Bscmake>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <ClCompile>
@@ -78,6 +82,8 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="AccSignUp.cpp" />
+    <ClCompile Include="AccStack.cpp" />
     <ClCompile Include="camera.cpp" />
     <ClCompile Include="device.cpp" />
     <ClCompile Include="login.cpp" />
@@ -85,10 +91,13 @@
     <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="AccSignUp.h" />
+    <ClInclude Include="AccStack.h" />
     <ClInclude Include="camera.h" />
     <ClInclude Include="device.h" />
     <ClInclude Include="global.h" />
     <ClInclude Include="ImaginUtil.h" />
+    <ClInclude Include="stack.h" />
     <ClInclude Include="stream.h" />
     <ClInclude Include="Timer.h" />
   </ItemGroup>

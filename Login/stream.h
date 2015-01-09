@@ -6,6 +6,7 @@ NAMESPACE_BEGIN(Imagin)
 
 class Stream
 {
+	DECLARE_UNCOPYABLE(Stream)
 private:
 	CoreApiDeviceStreamObj	_deviceStreamObj;
 	CoreApiDeviceMediaObj	_deviceMediaObj;

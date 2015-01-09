@@ -12,12 +12,24 @@
 
 NAMESPACE_BEGIN(Imagin)
 
+#define DECLARE_UNCOPYABLE(classname) \
+	private:\
+		classname(const classname&) {}\
+		classname& operator=(const classname&) {}
+
 
 typedef void(_stdcall *AsyncCallerCb)(void* caller,
 									  bool success,
 									  int code,
 									  const char* phrase,
 									  void* udata);
+
+typedef  void(_stdcall *EmailExistsResultCB)(void* caller,
+											 bool bResult,
+											 int nCode,
+											 const char* phrase,
+											 bool exists,
+											 void* udata);
 
 
 typedef void(_stdcall *MediaDataCb)(void* udata,

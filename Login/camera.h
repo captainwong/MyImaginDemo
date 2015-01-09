@@ -11,6 +11,7 @@ NAMESPACE_BEGIN(Imagin)
 class Stream;
 class Camera
 {
+	DECLARE_UNCOPYABLE(Camera)
 public:
 	typedef void(_stdcall *EnumStreamResultCb)(Camera* camera,
 											   bool success,

@@ -24,6 +24,7 @@ typedef void(__stdcall *CameraStateChangeCb)(Device* device,
 
 class Device
 {
+	DECLARE_UNCOPYABLE(Device)
 public:
 	Device(CoreApiDevManagerObj devMngrObj, CoreApiDevObj devObj);
 	
