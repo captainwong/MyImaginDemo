@@ -78,12 +78,19 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="camera.cpp" />
+    <ClCompile Include="device.cpp" />
     <ClCompile Include="login.cpp" />
+    <ClCompile Include="stream.cpp" />
+    <ClCompile Include="Timer.cpp" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="camera.h" />
     <ClInclude Include="device.h" />
+    <ClInclude Include="global.h" />
     <ClInclude Include="ImaginUtil.h" />
     <ClInclude Include="stream.h" />
+    <ClInclude Include="Timer.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
