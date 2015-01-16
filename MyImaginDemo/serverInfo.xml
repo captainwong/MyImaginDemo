@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<VS_ImaginDemo>
+    <accServer addr="sip.imagin.cn" port="18080"/>
+    <dmsServer addr="sip.imagin.cn" port="18080"/>
+</VS_ImaginDemo>

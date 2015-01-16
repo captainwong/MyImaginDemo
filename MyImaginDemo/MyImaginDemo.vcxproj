@@ -105,19 +105,44 @@
     <Text Include="ReadMe.txt" />
   </ItemGroup>
   <ItemGroup>
+    <ClInclude Include="Imagin\AccSignUp.h" />
+    <ClInclude Include="Imagin\AccStack.h" />
+    <ClInclude Include="Imagin\camera.h" />
+    <ClInclude Include="Imagin\device.h" />
+    <ClInclude Include="Imagin\global.h" />
+    <ClInclude Include="Imagin\ImaginUtil.h" />
+    <ClInclude Include="Imagin\ServerInfo.h" />
+    <ClInclude Include="Imagin\stack.h" />
+    <ClInclude Include="Imagin\stream.h" />
     <ClInclude Include="MyImaginDemo.h" />
     <ClInclude Include="MyImaginDemoDlg.h" />
     <ClInclude Include="Resource.h" />
+    <ClInclude Include="SignupDlg.h" />
     <ClInclude Include="stdafx.h" />
     <ClInclude Include="targetver.h" />
+    <ClInclude Include="Timer.h" />
+    <ClInclude Include="tinyxml\tinystr.h" />
+    <ClInclude Include="tinyxml\tinyxml.h" />
   </ItemGroup>
   <ItemGroup>
+    <ClCompile Include="Imagin\AccSignUp.cpp" />
+    <ClCompile Include="Imagin\AccStack.cpp" />
+    <ClCompile Include="Imagin\camera.cpp" />
+    <ClCompile Include="Imagin\device.cpp" />
+    <ClCompile Include="Imagin\ServerInfo.cpp" />
+    <ClCompile Include="Imagin\stream.cpp" />
+    <ClCompile Include="Imagin\Timer.cpp" />
     <ClCompile Include="MyImaginDemo.cpp" />
     <ClCompile Include="MyImaginDemoDlg.cpp" />
+    <ClCompile Include="SignupDlg.cpp" />
     <ClCompile Include="stdafx.cpp">
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
       <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
     </ClCompile>
+    <ClCompile Include="tinyxml\tinystr.cpp" />
+    <ClCompile Include="tinyxml\tinyxml.cpp" />
+    <ClCompile Include="tinyxml\tinyxmlerror.cpp" />
+    <ClCompile Include="tinyxml\tinyxmlparser.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ResourceCompile Include="MyImaginDemo.rc" />
@@ -131,4 +156,9 @@
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
   </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="MyImaginDemo.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
 </Project>

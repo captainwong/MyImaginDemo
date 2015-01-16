@@ -38,9 +38,9 @@ void AccSignUp::signup_on_result(void* udata,
 
 
 void AccSignUp::get_code_on_result(void * udata,
-							   CoreApiObj,
-							   CoreApiAsyncCallerObj,
-							   CoreApiResultObj result)
+								   CoreApiObj,
+								   CoreApiAsyncCallerObj,
+								   CoreApiResultObj result)
 {
 	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
 	accSignup->GetCodeOnResult(result);

@@ -70,6 +70,8 @@ BOOL CMyImaginDemoApp::InitInstance()
 	// such as the name of your company or organization
 	SetRegistryKey(_T("Local AppWizard-Generated Applications"));
 
+	core_api_init(NULL, NULL);
+
 	CMyImaginDemoDlg dlg;
 	m_pMainWnd = &dlg;
 	INT_PTR nResponse = dlg.DoModal();

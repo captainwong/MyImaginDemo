@@ -62,6 +62,7 @@ BEGIN_MESSAGE_MAP(CMyImaginDemoDlg, CDialogEx)
 	ON_WM_SYSCOMMAND()
 	ON_WM_PAINT()
 	ON_WM_QUERYDRAGICON()
+	ON_WM_TIMER()
 END_MESSAGE_MAP()
 
 
@@ -97,6 +98,7 @@ BOOL CMyImaginDemoDlg::OnInitDialog()
 	SetIcon(m_hIcon, FALSE);		// Set small icon
 
 	// TODO: Add extra initialization here
+	SetTimer(1, 10, NULL);
 
 	return TRUE;  // return TRUE  unless you set the focus to a control
 }
@@ -150,3 +152,10 @@ HCURSOR CMyImaginDemoDlg::OnQueryDragIcon()
 	return static_cast<HCURSOR>(m_hIcon);
 }
 
+
+
+void CMyImaginDemoDlg::OnTimer(UINT_PTR nIDEvent)
+{
+	core_api_process_event_loop();
+	CDialogEx::OnTimer(nIDEvent);
+}

@@ -34,8 +34,8 @@
 #include <afxcontrolbars.h>     // MFC support for ribbons and control bars
 
 
-
-
+#include "./Imagin/global.h"
+using namespace Imagin;
 
 
 
