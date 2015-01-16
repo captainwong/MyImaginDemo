@@ -15,10 +15,12 @@
 #*.vcxproj
 *.filters
 *.log
+*.tlog
+*.lastbuildstate
 *.pd_
 *.opensdf
-Debug/
-Release/
+#Debug/
+#Release/
 ReleaseD/
 
 # vc6
