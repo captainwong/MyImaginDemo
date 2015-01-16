@@ -1,5 +1,6 @@
 #pragma once
 
+namespace Imagin {
 class CTimer;
 typedef void(__stdcall *TimeoutCb)(CTimer* timer, void* udata);
 
@@ -17,4 +18,4 @@ private:
 	TimeoutCb		_timeoutCb;
 	void*			_udata;
 };
-
+NAMESPACE_END

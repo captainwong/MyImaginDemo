@@ -5,6 +5,11 @@
 
 namespace Imagin {
 
+DECLARE_CALLBACK_IMAGIN(signup_on_result, AccSignUp, SignupOnResult)
+DECLARE_CALLBACK_IMAGIN(get_code_on_result, AccSignUp, GetCodeOnResult)
+DECLARE_CALLBACK_IMAGIN(get_fogot_code_on_result, AccSignUp, GetFogotCodeOnResult)
+DECLARE_CALLBACK_IMAGIN(get_reset_code_on_result, AccSignUp, GetResetCodeOnResult)
+
 AccSignUp::AccSignUp(const char* domain,
 					unsigned short port,
 					AsyncCallerCb signupResultCb,
@@ -61,33 +66,33 @@ AccSignUp::~AccSignUp()
 
 
 // staic callback funcions
-void AccSignUp::signup_on_result(void* udata, 
-								 CoreApiObj, 
-								 CoreApiAsyncCallerObj, 
-								 CoreApiResultObj result)
-{
-	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
-	accSignup->SignupOnResult(result);
-}
-
-
-void AccSignUp::get_code_on_result(void * udata,
-								   CoreApiObj,
-								   CoreApiAsyncCallerObj,
-								   CoreApiResultObj result)
-{
-	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
-	accSignup->GetCodeOnResult(result);
-}
-
-void AccSignUp::get_fogot_code_on_result(void* udata,
-										 CoreApiObj,
-										 CoreApiAsyncCallerObj,
-										 CoreApiResultObj result)
-{
-	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
-	accSignup->GetFogotCodeOnResult(result);
-}
+//void AccSignUp::signup_on_result(void* udata, 
+//								 CoreApiObj, 
+//								 CoreApiAsyncCallerObj, 
+//								 CoreApiResultObj result)
+//{
+//	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
+//	accSignup->SignupOnResult(result);
+//}
+//
+//
+//void AccSignUp::get_code_on_result(void * udata,
+//								   CoreApiObj,
+//								   CoreApiAsyncCallerObj,
+//								   CoreApiResultObj result)
+//{
+//	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
+//	accSignup->GetCodeOnResult(result);
+//}
+//
+//void AccSignUp::get_fogot_code_on_result(void* udata,
+//										 CoreApiObj,
+//										 CoreApiAsyncCallerObj,
+//										 CoreApiResultObj result)
+//{
+//	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
+//	accSignup->GetFogotCodeOnResult(result);
+//}
 
 
 void AccSignUp::is_email_exists_on_result(void* udata,
@@ -101,14 +106,14 @@ void AccSignUp::is_email_exists_on_result(void* udata,
 }
 
 
-void AccSignUp::get_reset_code_on_result(void* udata,
-										 CoreApiObj,
-										 CoreApiAsyncCallerObj,
-										 CoreApiResultObj result)
-{
-	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
-	accSignup->GetResetCodeOnResult(result);
-}
+//void AccSignUp::get_reset_code_on_result(void* udata,
+//										 CoreApiObj,
+//										 CoreApiAsyncCallerObj,
+//										 CoreApiResultObj result)
+//{
+//	AccSignUp* accSignup = reinterpret_cast<AccSignUp*>(udata); assert(accSignup);
+//	accSignup->GetResetCodeOnResult(result);
+//}
 // called by those callback functions
 void AccSignUp::SignupOnResult(CoreApiResultObj result)
 {

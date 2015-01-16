@@ -1,7 +1,7 @@
 #pragma once
 
 #include "global.h"
-NAMESPACE_BEGIN(Imagin)
+namespace Imagin {
 
 class AccStack;
 class AccSignUp

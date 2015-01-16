@@ -3,6 +3,8 @@
 
 NAMESPACE_BEGIN(Imagin)
 
+DECLARE_CALLBACK_IMAGIN(open_media_on_result, Stream, OpenMediaOnResult)
+
 Stream::Stream(CoreApiDeviceStreamObj deviceStreamObj)
 	: _deviceMediaObj(CORE_API_INVALID_OBJ)
 	, _callerObj(CORE_API_INVALID_OBJ)
@@ -82,14 +84,14 @@ void Stream::CloseMedia()
 
 
 // **********static callback functions begin**********************//
-void Stream::open_media_on_result(void* udata,
-								 CoreApiObj obj,
-								 CoreApiAsyncCallerObj caller,
-								 CoreApiResultObj result)
-{
-	Stream* stream = reinterpret_cast<Stream*>(udata); assert(stream);
-	stream->OpenMediaOnResult(result);
-}
+//void Stream::open_media_on_result(void* udata,
+//								 CoreApiObj obj,
+//								 CoreApiAsyncCallerObj caller,
+//								 CoreApiResultObj result)
+//{
+//	Stream* stream = reinterpret_cast<Stream*>(udata); assert(stream);
+//	stream->OpenMediaOnResult(result);
+//}
 
 
 void Stream::media_audio_codec(void* udata,

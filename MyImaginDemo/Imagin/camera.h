@@ -15,17 +15,12 @@ class Camera
 {
 	DECLARE_UNCOPYABLE(Camera)
 public:
-	typedef void(_stdcall *EnumStreamResultCb)(Camera* camera,
-											   bool success,
-											   int code,
-											   const char* phrase,
-											   void* udata);
 
 private:
 	CoreApiDeviceCameraObj				_deviceCameraObj;
 	CoreApiAsyncCallerObj				_callerObj;
 	CoreApiAsyncCallerCb				_callerCb;
-	EnumStreamResultCb					_enumStreamResultCb;
+	AsyncCallerCb						_enumStreamResultCb;
 	CoreApiHelperStreamEnumeratorObj	_helperStreamEnumeratorObj;
 	std::list<Stream*>					_streamList;
 	std::list<Stream*>::iterator		_streamListIterator;
@@ -35,7 +30,7 @@ private:
 public:
 	
 	Camera(const CoreApiDeviceCameraObj cameraObj,
-		   EnumStreamResultCb enumStreamResultCb, 
+		   AsyncCallerCb enumStreamResultCb,
 		   void* udata);
 
 	~Camera();
@@ -58,10 +53,10 @@ public:
 
 protected:
 	// static callback functions
-	static void enum_stream_on_result(void* udata,
+	/*static void enum_stream_on_result(void* udata,
 									  CoreApiObj obj,
 									  CoreApiAsyncCallerObj caller,
-									  CoreApiResultObj result);
+									  CoreApiResultObj result);*/
 
 protected:
 
@@ -69,9 +64,9 @@ protected:
 
 	void CreateStreamList();
 
-protected:
+public:
 	// called by the callback functions
-	void EnumStreamResult(CoreApiResultObj result);
+	void EnumStreamOnResult(CoreApiResultObj result);
 };
 
 

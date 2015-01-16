@@ -45,7 +45,7 @@ protected:
 	
 protected:
 	// static callback functions
-	static void signup_on_result(void* udata,
+	/*static void signup_on_result(void* udata,
 								 CoreApiObj,
 								 CoreApiAsyncCallerObj,
 								 CoreApiResultObj result);
@@ -59,18 +59,18 @@ protected:
 										 CoreApiObj,
 										 CoreApiAsyncCallerObj,
 										 CoreApiResultObj result);
-
+*/
 	static void is_email_exists_on_result(void* udata,
 										  CoreApiObj,
 										  CoreApiAsyncCallerObj,
 										  CoreApiResultObj result,
 										  int exists); 
 	
-	static void get_reset_code_on_result(void* udata,
+	/*static void get_reset_code_on_result(void* udata,
 										 CoreApiObj,
 										 CoreApiAsyncCallerObj,
-										 CoreApiResultObj result);
-protected:
+										 CoreApiResultObj result);*/
+public:
 	// called by those callback functions
 	void SignupOnResult(CoreApiResultObj result);
 	void GetCodeOnResult(CoreApiResultObj result);

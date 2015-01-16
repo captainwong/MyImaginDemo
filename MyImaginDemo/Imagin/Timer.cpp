@@ -5,6 +5,8 @@
 #include <mmsystem.h>
 #pragma comment(lib, "winmm.lib")
 
+namespace Imagin {
+
 void __stdcall TimeOutCallback(UINT /*timeID*/,
 							   UINT /*msg*/,
 							   DWORD_PTR user,
@@ -62,4 +64,4 @@ void CTimer::OnTimer()
 }
 
 
-
+NAMESPACE_END

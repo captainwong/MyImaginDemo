@@ -3,8 +3,10 @@
 
 
 // CSignupDlg dialog
-
-class AccSignUp;
+namespace Imagin
+{
+	class AccSignUp;
+};
 
 class CSignupDlg : public CDialogEx
 {

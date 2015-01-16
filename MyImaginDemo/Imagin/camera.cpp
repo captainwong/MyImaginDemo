@@ -4,9 +4,10 @@
 
 NAMESPACE_BEGIN(Imagin)
 
+DECLARE_CALLBACK_IMAGIN(enum_stream_on_result, Camera, EnumStreamOnResult)
 
 Camera::Camera(const CoreApiDeviceCameraObj cameraObj,
-				EnumStreamResultCb enumStreamResultCb,
+				AsyncCallerCb enumStreamResultCb,
 				void* udata)
 	: _callerObj(CORE_API_INVALID_OBJ)
 	, _enumStreamResultCb(CORE_API_INVALID_OBJ)
@@ -98,14 +99,14 @@ CoreApiVSize Camera::GetStreamMediaVideoSize(INT32 nstream)
 
 
 // static callback functions
-void Camera::enum_stream_on_result(void* udata,
-								   CoreApiObj obj,
-								   CoreApiAsyncCallerObj caller,
-								   CoreApiResultObj result)
-{
-	Camera* camera = reinterpret_cast<Camera*>(udata); assert(camera);
-	camera->EnumStreamResult(result);
-}
+//void Camera::enum_stream_on_result(void* udata,
+//								   CoreApiObj obj,
+//								   CoreApiAsyncCallerObj caller,
+//								   CoreApiResultObj result)
+//{
+//	Camera* camera = reinterpret_cast<Camera*>(udata); assert(camera);
+//	camera->EnumStreamResult(result);
+//}
 
 
 // protected:
@@ -151,7 +152,7 @@ void Camera::CreateStreamList()
 
 
 // called by the callback functions
-void Camera::EnumStreamResult(CoreApiResultObj result)
+void Camera::EnumStreamOnResult(CoreApiResultObj result)
 {
 	assert(core_api_obj_is_valid(result));
 	int code = core_api_result_get_code(result);

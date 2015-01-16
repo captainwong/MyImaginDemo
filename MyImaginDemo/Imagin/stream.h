@@ -36,10 +36,10 @@ public:
 	
 protected:
 	// static callback functions
-	static void open_media_on_result(void* udata,
+	/*static void open_media_on_result(void* udata,
 									 CoreApiObj obj,
 									 CoreApiAsyncCallerObj caller,
-									 CoreApiResultObj result);
+									 CoreApiResultObj result);*/
 
 	static void media_audio_codec(void* udata,
 								  CoreApiDeviceMediaObj media,
@@ -77,7 +77,7 @@ protected:
 
 	static void media_shutdown(void* udata, CoreApiDeviceMediaObj media);
 
-protected:
+public:
 	// called by the callback functions
 	void OpenMediaOnResult(CoreApiResultObj result);
 

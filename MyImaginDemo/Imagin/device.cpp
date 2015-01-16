@@ -8,6 +8,10 @@ NAMESPACE_BEGIN(Imagin)
 
 static const int RE_ENUM_CAMERA_INTERVAL = 10 * 1000;
 
+DECLARE_CALLBACK_IMAGIN(enum_camera_on_result, Device, EnumCameraOnResult)
+DECLARE_CALLBACK_TIMER(re_enum_camera, Device, EnumCamera)
+DECLARE_CALLBACK_USER(enum_stream_on_result, Device, EnumStreamOnResult)
+
 Device::Device(CoreApiDevManagerObj devMngrObj, CoreApiDevObj devObj)
 	: _deviceUid()
 	, _deviceProductName()
@@ -177,32 +181,33 @@ void Device::CloseMedia(INT32 ncamera, INT32 nstream)
 
 
 // static callback functions
-void Device::enum_camera_on_result(void* udata,
-								   CoreApiObj,
-								   CoreApiAsyncCallerObj,
-								   CoreApiResultObj result)
-{
-	Device* device = reinterpret_cast<Device*>(udata); assert(device);
-	device->EnumCameraOnResult(result);
-}
+//void Device::enum_camera_on_result(void* udata,
+//								   CoreApiObj,
+//								   CoreApiAsyncCallerObj,
+//								   CoreApiResultObj result)
+//{
+//	Device* device = reinterpret_cast<Device*>(udata); assert(device);
+//	device->EnumCameraOnResult(result);
+//}
 
 
-void __stdcall Device::re_enum_camera(CTimer* timer, void* udata)
-{
-	Device* device = reinterpret_cast<Device*>(udata); assert(device);
-	device->EnumCamera();
-}
+
+//void __stdcall Device::re_enum_camera(CTimer* timer, void* udata)
+//{
+//	Device* device = reinterpret_cast<Device*>(udata); assert(device);
+//	device->EnumCamera();
+//}
 
 
-void __stdcall Device::enum_stream_on_result(Camera* camera,
-											 bool success,
-											 int code,
-											 const char* phrase,
-											 void* udata)
-{
-	Device* device = reinterpret_cast<Device*>(udata); assert(device);
-	device->EnumStreamOnResult(success, code, phrase);
-}
+//void __stdcall Device::enum_stream_on_result(Camera* camera,
+//											 bool success,
+//											 int code,
+//											 const char* phrase,
+//											 void* udata)
+//{
+//	Device* device = reinterpret_cast<Device*>(udata); assert(device);
+//	device->EnumStreamOnResult(success, code, phrase);
+//}
 
 // protected: called by those callback functions
 void Device::EnumCameraOnResult(CoreApiResultObj result)
@@ -213,7 +218,6 @@ void Device::EnumCameraOnResult(CoreApiResultObj result)
 
 		int code = core_api_result_get_code(result);
 		const char* phrase = core_api_result_get_phrase(result);
-
 		
 		if (code == CORE_API_RESULT_OK->code) {
 			CreateCameraList();

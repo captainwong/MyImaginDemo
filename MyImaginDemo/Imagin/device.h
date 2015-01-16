@@ -4,13 +4,10 @@
 #include <string>
 #include <list>
 
-
-class CTimer;
-
 namespace Imagin
 {
 
-
+class CTimer;
 class Device;
 class Stream;
 class Camera;
@@ -67,7 +64,7 @@ public:
 	void CloseMedia(INT32 ncamera, INT32 nstream);
 	
 protected:	// static callback functions
-	static void enum_camera_on_result(void*,
+	/*static void enum_camera_on_result(void*,
 									  CoreApiObj,
 									  CoreApiAsyncCallerObj,
 									  CoreApiResultObj);
@@ -79,8 +76,8 @@ protected:	// static callback functions
 												int code,
 												const char* phrase,
 												void* udata);
-
-protected:	// called by those callback functions
+	*/
+public:	// called by those callback functions
 	void EnumCameraOnResult(CoreApiResultObj result);
 
 	void EnumStreamOnResult(bool success, int code, const char* phrase);
