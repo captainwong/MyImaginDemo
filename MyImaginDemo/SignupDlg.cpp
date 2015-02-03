@@ -6,10 +6,13 @@
 #include "SignupDlg.h"
 #include "afxdialogex.h"
 #include <regex>
+#include "./Imagin/AccSignUp.h"
 
 // CSignupDlg dialog
 
 IMPLEMENT_DYNAMIC(CSignupDlg, CDialogEx)
+
+DECLARE_CALLBACK_USER(get_code_on_result, CSignupDlg, GetCodeOnResult)
 
 CSignupDlg::CSignupDlg(CWnd* pParent /*=NULL*/)
 	: CDialogEx(CSignupDlg::IDD, pParent)
@@ -39,6 +42,7 @@ void CSignupDlg::DoDataExchange(CDataExchange* pDX)
 BEGIN_MESSAGE_MAP(CSignupDlg, CDialogEx)
 	ON_BN_CLICKED(IDC_BUTTON1, &CSignupDlg::OnBnClickedButton1)
 	ON_EN_KILLFOCUS(IDC_EDIT1, &CSignupDlg::OnEnKillfocusEdit1)
+	ON_BN_CLICKED(IDC_BUTTON2, &CSignupDlg::OnBnClickedButton2)
 END_MESSAGE_MAP()
 
 
@@ -74,5 +78,58 @@ void CSignupDlg::OnEnKillfocusEdit1()
 	}
 
 	m_bEmailExists = false;
-
+	_signup->CheckIfEmailExists(W2A(m_email));
 }
+
+
+void CSignupDlg::OnBnClickedButton2()
+{
+	
+}
+
+
+// called by static callback functions
+void CSignupDlg::GetCodeOnResult(FUNCTION_PARAMETER_USER_3)
+{
+	CString strLogInfo;
+	if (success) {
+		strLogInfo = _T("验证码已送到邮箱");
+	} else {
+		USES_CONVERSION;
+		strLogInfo.Format(_T("获取验证码失败：%s code:%d"), A2W(phrase), code);
+	}
+	MessageBox(strLogInfo);
+}
+
+
+void CSignupDlg::SignupOnResult(FUNCTION_PARAMETER_USER_3)
+{
+	CString strLogInfo;
+	if (success) {
+		strLogInfo = _T("注册成功");
+	} else {
+		USES_CONVERSION;
+		strLogInfo.Format(_T("注册失败：%s code:%d"), A2W(phrase), code);
+	}
+	MessageBox(strLogInfo);
+}
+
+
+void CSignupDlg::EmailExistsOnResult(FUNCTION_PARAMETER_USER_3, bool exists)
+{
+	if (success) {
+		if (exists) {
+			m_bEmailExists = TRUE;
+			m_staticNote.SetWindowText(_T("邮箱已注册"));
+		} else {
+			m_bEmailExists = FALSE;
+			m_staticNote.SetWindowText(_T("邮箱可使用"));
+		}
+	} else {
+		CString strLogInfo;
+		USES_CONVERSION;
+		strLogInfo.Format(_T("验证邮箱失败：%s code:%d"), A2W(phrase), code);
+		MessageBox(strLogInfo);
+	}
+}
+

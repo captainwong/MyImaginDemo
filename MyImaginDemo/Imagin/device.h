@@ -80,7 +80,7 @@ protected:	// static callback functions
 public:	// called by those callback functions
 	void EnumCameraOnResult(CoreApiResultObj result);
 
-	void EnumStreamOnResult(bool success, int code, const char* phrase);
+	void EnumStreamOnResult(FUNCTION_PARAMETER_USER_3);
 
 protected:
 

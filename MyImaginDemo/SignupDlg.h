@@ -32,4 +32,9 @@ public:
 	afx_msg void OnBnClickedButton1();
 	afx_msg void OnEnKillfocusEdit1();
 	CStatic m_staticNote;
+public:
+	void GetCodeOnResult(FUNCTION_PARAMETER_USER_3);
+	void SignupOnResult(FUNCTION_PARAMETER_USER_3);
+	void EmailExistsOnResult(FUNCTION_PARAMETER_USER_3, bool exists);
+	afx_msg void OnBnClickedButton2();
 };

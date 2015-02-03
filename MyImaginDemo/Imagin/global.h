@@ -30,6 +30,7 @@ private:\
 		cc->caller_function(result); \
 	}
 
+#define FUNCTION_PARAMETER_USER_3 bool success, int code, const char* phrase
 
 #define DECLARE_CALLBACK_USER(function, caller_class, caller_function)\
 	static void __stdcall function(void* caller, \

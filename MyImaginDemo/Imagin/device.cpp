@@ -234,7 +234,7 @@ void Device::EnumCameraOnResult(CoreApiResultObj result)
 }
 
 
-void Device::EnumStreamOnResult(bool success, int code, const char* phrase)
+void Device::EnumStreamOnResult(FUNCTION_PARAMETER_USER_3)
 {
 	if (success) {
 		SetCameraState(CS_READY);
